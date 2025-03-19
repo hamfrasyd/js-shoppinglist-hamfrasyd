@@ -18,3 +18,22 @@ function appendLi(li){
 
 let liTest = addLi("healthy", 4, "sutmig");
 appendLi(liTest);
+
+
+
+
+
+
+//Opgave Shoppinglist JS events
+let button = document.getElementById("addButton");
+
+button.addEventListener("click", addItem);
+
+function addItem(){
+    let inputField = document.getElementById("inputTextField");
+    let inputFieldValue = inputField.value;
+
+    let liToBeAdded = addLi("healthy", 5, inputFieldValue);
+    appendLi(liToBeAdded);
+
+}
