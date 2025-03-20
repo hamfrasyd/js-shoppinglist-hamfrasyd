@@ -40,6 +40,18 @@ function returnNumberOfList(list){
     let element = document.getElementsByTagName(list); 
     return element.length;
 }
+//Extra Task 7) Move a node
+function moveElements(){
+    let listOfUnhealthy = document.getElementsByClassName("unhealthy");
+    console.log(listOfUnhealthy);
+
+    let newUl = document.getElementById("listUnhealthy");
+    
+    //reverse for loop da jeg fjerne noget fra "let listOfUnhealthy" hvert gang den iterere 1 gang
+    for (let i = listOfUnhealthy.length - 1; i >= 0; i--) { 
+     newUl.append(listOfUnhealthy[i]);
+    }
+}
 
 /*TEST AREA*/
 //task 1
@@ -56,7 +68,8 @@ deleteElement(5);
 changeTextOfLi(4);
 //Task 6
 console.log(returnNumberOfList("li"));
-
+//Task 7
+moveElements();
 
 
 
