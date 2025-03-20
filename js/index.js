@@ -20,11 +20,8 @@ function appendLi(li){
 }
 
 //Task 3) Create a function that change or add the class attribute 
-function changeClassAttribute(classElement, value){
-    let toBeChangedElement = document.getElementsByClassName(classElement);
-
-    toBeChangedElement.setAttribute("class", value);
-    appendLi(toBeChangedElement);
+function changeClassAttribute(element, value){
+    element.setAttribute("class", value);
 }
 
 /*TEST AREA*/
@@ -33,7 +30,7 @@ let liTest = addLi("healthy", 4, "sutmig");
 //task 2
 appendLi(liTest);
 //task 3
-changeClassAttribute("healthy", "ikkeMig");
+changeClassAttribute(liTest, "unhealthy");
 
 
 
