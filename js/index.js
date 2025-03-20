@@ -35,6 +35,12 @@ function changeTextOfLi(id){
     element.textContent = "Det her er en ny";
 }
 
+//Extra Task 6) Create a function that count all the li element at a specific list
+function returnNumberOfList(list){
+    let element = document.getElementsByTagName(list); 
+    return element.length;
+}
+
 /*TEST AREA*/
 //task 1
 let liTest = addLi("healthy", 4, "sutmig");
@@ -48,7 +54,8 @@ appendLi(deleteTest);
 deleteElement(5);
 //Task 5
 changeTextOfLi(4);
-
+//Task 6
+console.log(returnNumberOfList("li"));
 
 
 
