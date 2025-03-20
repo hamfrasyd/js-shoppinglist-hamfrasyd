@@ -13,8 +13,14 @@ function addLi(classAttribute, IdAttribute, paramTextNode){
 }
 
 // Task 2) Create a function that append a Li element to a list 
-function appendLi(li){
+function hAppendLi(li){
+
     let listElement = document.getElementById("list");
+    listElement.appendChild(li);
+}
+function uAppendLi(li){
+
+    let listElement = document.getElementById("listUnhealthy");
     listElement.appendChild(li);
 }
 
@@ -57,12 +63,12 @@ function moveElements(){
 //task 1
 let liTest = addLi("healthy", 4, "sutmig");
 //task 2
-appendLi(liTest);
+hAppendLi(liTest);
 //task 3
 changeClassAttribute(liTest, "unhealthy");
 //Task 4
 let deleteTest = addLi("healthy", 5, "delete");
-appendLi(deleteTest);
+hAppendLi(deleteTest);
 deleteElement(5);
 //Task 5
 changeTextOfLi(4);
@@ -82,7 +88,16 @@ function addItem(){
     let inputField = document.getElementById("inputTextField");
     let inputFieldValue = inputField.value;
 
-    let liToBeAdded = addLi("healthy", 5, inputFieldValue);
-    appendLi(liToBeAdded);
+    let classOption = document.getElementById("classOption");
+    let optionValue = classOption.value;
+
+    let liToBeAdded = addLi(optionValue, 5, inputFieldValue);
+    
+    if (optionValue == "healthy"){
+        hAppendLi(liToBeAdded);
+    }
+    else{
+        uAppendLi(liToBeAdded);
+    }
 
 }
