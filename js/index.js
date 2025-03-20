@@ -29,6 +29,12 @@ function deleteElement(id){
     element.remove();
 }
 
+//EXTRA Task 5) Create a function that change the text in a Li element
+function changeTextOfLi(id){
+    let element = document.getElementById(id); 
+    element.textContent = "Det her er en ny";
+}
+
 /*TEST AREA*/
 //task 1
 let liTest = addLi("healthy", 4, "sutmig");
@@ -40,6 +46,8 @@ changeClassAttribute(liTest, "unhealthy");
 let deleteTest = addLi("healthy", 5, "delete");
 appendLi(deleteTest);
 deleteElement(5);
+//Task 5
+changeTextOfLi(4);
 
 
 
