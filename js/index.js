@@ -1,4 +1,6 @@
 //Write your Javascript code here
+
+// Task 1) Create a function that return a new Li element
 function addLi(classAttribute, IdAttribute, paramTextNode){
     
     let newElement = document.createElement("li");
@@ -11,13 +13,27 @@ function addLi(classAttribute, IdAttribute, paramTextNode){
     return newElement;
 }
 
+// Task 2) Create a function that append a Li element to a list 
 function appendLi(li){
     let listElement = document.getElementById("list");
     listElement.appendChild(li);
 }
 
+//Task 3) Create a function that change or add the class attribute 
+function changeClassAttribute(classElement, value){
+    let toBeChangedElement = document.getElementsByClassName(classElement);
+
+    toBeChangedElement.setAttribute("class", value);
+    appendLi(toBeChangedElement);
+}
+
+/*TEST AREA*/
+//task 1
 let liTest = addLi("healthy", 4, "sutmig");
+//task 2
 appendLi(liTest);
+//task 3
+changeClassAttribute("healthy", "ikkeMig");
 
 
 
