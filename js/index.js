@@ -2,7 +2,6 @@
 
 // Task 1) Create a function that return a new Li element
 function addLi(classAttribute, IdAttribute, paramTextNode){
-    
     let newElement = document.createElement("li");
 
     newElement.setAttribute("class", classAttribute);
@@ -24,6 +23,12 @@ function changeClassAttribute(element, value){
     element.setAttribute("class", value);
 }
 
+//Task 4) Create a function that delete a li element
+function deleteElement(id){
+    let element = document.getElementById(id); 
+    element.remove();
+}
+
 /*TEST AREA*/
 //task 1
 let liTest = addLi("healthy", 4, "sutmig");
@@ -31,7 +36,10 @@ let liTest = addLi("healthy", 4, "sutmig");
 appendLi(liTest);
 //task 3
 changeClassAttribute(liTest, "unhealthy");
-
+//Task 4
+let deleteTest = addLi("healthy", 5, "delete");
+appendLi(deleteTest);
+deleteElement(5);
 
 
 
